@@ -25,7 +25,7 @@ set -eo pipefail
 # }
 # ```
 
-chrome_download_path="${HOME}/Desktop"
+chrome_download_path="${HOME}/Downloads"
 
 # Location the file is downloaded to
 plugin_download_file="${chrome_download_path}/credentials"
@@ -96,3 +96,4 @@ unset AWS_ACCESS_KEY_ID ;
 unset AWS_SECRET_ACCESS_KEY ;
 '${cred_file_export}'
 '
+
