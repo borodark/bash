@@ -12,8 +12,11 @@ alias gpu='git push upstream'
 alias gr='git remote -v'
 alias gl='git log --branches --remotes --tags --graph --oneline --decorate'
 alias find='find .'
+alias la='ls -la'
+alias lA='ls -lA'
 export HISTCONTROL=ignoredups:erasedups
 export PATH=$PATH:~/bin
+. /usr/local/etc/bash_completion.d/git-completion.bash
 
 function awsup()
 {
