@@ -29,7 +29,7 @@ if [ -d "$HOME/adb-fastboot/platform-tools" ] ; then
     export PATH="$HOME/adb-fastboot/platform-tools:$PATH"
 fi
 
-. /usr/local/etc/bash_completion.d/git-completion.bash
+#. $(find / -name git-completion.bash)
 
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases

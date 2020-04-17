@@ -17,7 +17,6 @@ export PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 
 alias ll='ls -l'
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
-#alias du='du -xh --max-depth=1 | sort -h'
 
 alias gd='git diff'
 alias gs='git status'
@@ -36,9 +35,9 @@ alias myips='ifconfig | grep inet'
 alias dps='docker ps'
 alias dpsa='dps -a'
 
-alias aws='aws --no-verify-ssl'
-
-alias wget='wget --no-check-certificate'
-alias sursp='sudo su - svc-dl-rsp-demo-np'
-alias sunmls='sudo su - svc-dl-nmls-etl-np'
 alias add-req='echo $1 >> req.txt'
+. /usr/local/etc/bash_completion.d/git-completion.bash
+
+alias ducks="du -cks * | sort -rn | head | awk '{printf \"%.2f M ---> %s\n\",\$1/1024, \$2}'"
+
+alias mvn='docker run -it --rm --name my-maven-project -v "$(pwd)":/usr/src/mymaven -v "$HOME/.m2":/root/.m2 -v "$PWD/target:/usr/src/mymaven/target" -w /usr/src/mymaven maven:3.3-jdk-8 mvn'
