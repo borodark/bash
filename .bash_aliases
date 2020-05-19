@@ -36,7 +36,7 @@ alias dps='docker ps'
 alias dpsa='dps -a'
 
 alias add-req='echo $1 >> req.txt'
-. /usr/local/etc/bash_completion.d/git-completion.bash
+#. /usr/local/etc/bash_completion.d/git-completion.bash
 
 alias ducks="du -cks * | sort -rn | head | awk '{printf \"%.2f M ---> %s\n\",\$1/1024, \$2}'"
 
