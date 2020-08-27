@@ -41,3 +41,5 @@ alias add-req='echo $1 >> req.txt'
 alias ducks="du -cks * | sort -rn | head | awk '{printf \"%.2f M ---> %s\n\",\$1/1024, \$2}'"
 
 alias mvn='docker run -it --rm --name my-maven-project -v "$(pwd)":/usr/src/mymaven -v "$HOME/.m2":/root/.m2 -v "$PWD/target:/usr/src/mymaven/target" -w /usr/src/mymaven maven:3.3-jdk-8 mvn'
+
+alias gradle='docker run --rm -u gradle -v "$PWD":/home/gradle/project -v "$HOME/.m2":/root/.m2 -v "$PWD"/build:/home/gradle/project/build -w /home/gradle/project gradle:5.6.4-jdk8 gradle --no-daemon'
