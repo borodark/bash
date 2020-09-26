@@ -48,3 +48,7 @@ alias cda='cd ~/projects/aeon/'
 alias dca='docker-compose up'
 alias rd='docker exec -it aeon_meta_demo_1 bash'
 alias dcd='docker-compose down'
+alias mdgc='mix do deps.get, deps.compile'
+alias mxc='mix compile'
+alias mxt='mix test'
+
