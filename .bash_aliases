@@ -1,3 +1,8 @@
+function gitconfigrm()
+{
+    git config user.email igorostaptchenko@rocketmortgage.com
+    git config user.name "Igor Ostaptchenko"
+}
 function gitconfigio()
 {
     git config user.email igor@octanix.com
@@ -63,3 +68,4 @@ alias grex='grep -r --include "*.ex"'
 alias grexs='grep -r --include "*.exs"'
 alias greyml='grep -r --include "*.yml"'
 alias greyaml='grep -r --include "*.yaml"'
+export ERL_AFLAGS="-kernel shell_history enabled -kernel shell_history_file_bytes 1024000"

@@ -4,6 +4,6 @@ alias jdk='docker run -it --rm --name my-maven-project -v "$(pwd)":/usr/src/myma
 
 alias gradle='docker run --rm -u gradle -v "$PWD":/home/gradle/project -v "$HOME/.m2":/root/.m2 -v "$PWD"/build:/home/gradle/project/build -w /home/gradle/project gradle:5.6.4-jdk8 gradle --no-daemon'
 
-alias mix='docker run -it -v ~/.cache/:/home/`id -un`/.cache/ -v /etc/passwd:/etc/passwd:ro -v /etc/group:/etc/group:ro  -u `id -u`:`id -g` -v `pwd`:`pwd` -w `pwd` -v ~/.ssh/:/home/`id -un`/.ssh/ -v ~/.mix:/home/`id -un`/.mix -v ~/.hex:/home/`id -un`/.hex  demo mix'
+alias mix='docker run -v ~/.cache/:/home/`id -un`/.cache/ -v /etc/passwd:/etc/passwd:ro -v /etc/group:/etc/group:ro  -u `id -u`:`id -g` -v `pwd`:`pwd` -w `pwd` -v ~/.ssh/:/home/`id -un`/.ssh/ -v ~/.mix:/home/`id -un`/.mix -v ~/.hex:/home/`id -un`/.hex elixir mix'
 
-alias iex='docker run -it -v ~/.cache/:/home/`id -un`/.cache/ -v /etc/passwd:/etc/passwd:ro -v /etc/group:/etc/group:ro -u `id -u`:`id -g` -v `pwd`:`pwd` -w `pwd` -v ~/.ssh/:/home/`id -un`/.ssh/ -v ~/.mix:/home/`id -un`/.mix -v ~/.hex:/home/`id -un`/.hex  demo iex'
+alias iex='docker run -it -p 4000:4000 -v ~/.cache/:/home/`id -un`/.cache/ -v /etc/passwd:/etc/passwd:ro -v /etc/group:/etc/group:ro -u `id -u`:`id -g` -v `pwd`:`pwd` -w `pwd` -v ~/.ssh/:/home/`id -un`/.ssh/ -v ~/.mix:/home/`id -un`/.mix -v ~/.hex:/home/`id -un`/.hex elixir iex'
